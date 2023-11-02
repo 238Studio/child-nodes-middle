@@ -1,13 +1,13 @@
 package robotModuleService
 
 import (
-	"childNodes/robotBasicAPI/configService"
-	"childNodes/robotBasicAPI/const"
-	"childNodes/robotBasicAPI/databaseService"
-	"childNodes/robotBasicAPI/deviceService"
-	"childNodes/robotBasicAPI/nativeCallService"
-	"childNodes/robotBasicAPI/netService"
 	"encoding/json"
+	_const "github.com/UniversalRobotDriveTeam/child-nodes-assist/const"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/configService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/databaseService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/deviceService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/httpNetService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/websocketService"
 	"strconv"
 	"time"
 )
@@ -143,14 +143,6 @@ func (manager *BasicRobotModuleManager) cNativeCall() {
 	manager.BasicRobotModulesInitArgsSet.LocalCallHttpInit = &url
 }
 
-// 初始化本地调用
-// 传入：无
-// 传出：无
-func (manager *BasicRobotModuleManager) iNativeCall() {
-	url := *manager.BasicRobotModulesInitArgsSet.LocalCallHttpInit.(*string)
-	manager.RobotBasicModulesSet.LocalCallHttp = nativeCallService.InitHttpCall(url)
-}
-
 // 初始化Http网络服务配置
 // 传入：无
 // 传出：无
@@ -178,7 +170,7 @@ func (manager *BasicRobotModuleManager) iHttpApp() {
 	args := *manager.BasicRobotModulesInitArgsSet.HttpAppInit.(*[]interface{})
 	url = args[0].(string)
 	params = args[1].(map[string]string)
-	manager.RobotBasicModulesSet.HttpApp = netService.InitHttpAPP(url, params)
+	manager.RobotBasicModulesSet.HttpApp = httpNetService.InitHttpAPP(url, params)
 }
 
 // 初始化websocket网络服务配置
@@ -203,5 +195,5 @@ func (manager *BasicRobotModuleManager) iWebApp() {
 	wsURL := args[0].(string)
 	pingTimerMargin := args[1].(int)
 	pongMaxDelay := args[2].(int)
-	manager.RobotBasicModulesSet.WebApp, _ = netService.InitWebsocketAPP(wsURL, pingTimerMargin, pongMaxDelay)
+	manager.RobotBasicModulesSet.WebApp, _ = websocketService.InitWebsocketAPP(wsURL, pingTimerMargin, pongMaxDelay)
 }

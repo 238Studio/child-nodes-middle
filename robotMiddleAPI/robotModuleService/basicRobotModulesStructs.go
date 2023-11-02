@@ -1,14 +1,12 @@
 package robotModuleService
 
 import (
-	"childNodes/robotBasicAPI/configService"
-	"childNodes/robotBasicAPI/databaseService"
-	"childNodes/robotBasicAPI/deviceService"
-	"childNodes/robotBasicAPI/nativeCallService"
-	"childNodes/robotBasicAPI/netService/httpNetService"
-	"childNodes/robotBasicAPI/netService/websocketService"
-	"childNodes/robotBasicAPI/visualService"
-	"childNodes/robotMiddleAPI/taskTableCore"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/configService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/databaseService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/deviceService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/httpNetService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/websocketService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-middle/robotMiddleAPI/taskTableCore"
 )
 
 // RobotBasicModules 构成子节点最基本的几个模块
@@ -21,16 +19,14 @@ type RobotBasicModules struct {
 	RemoteDatabaseService *databaseService.DatabaseAPP
 	// 串口服务
 	SerialService *deviceService.SerialApp
-	// 本地方法调用HTTP
-	LocalCallHttp *nativeCallService.HttpCallApp
 	// Http传递服务
 	HttpApp *httpNetService.HttpAPP
 	// webSocket传递服务
 	WebApp *websocketService.WebApp
 	// 任务表服务
 	TaskTableApp *taskTableCore.TaskTableApp
-	// 视觉服务
-	VisualApp *visualService.VisualApp
+	// 视觉服务 todo
+	//VisualApp *visualService
 }
 
 // RobotBasicModulesExpectRun 子节点的服务是否需要运行

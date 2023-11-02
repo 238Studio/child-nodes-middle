@@ -40,22 +40,17 @@ func (manager *BasicRobotModuleManager) robotModulesMonitor() {
 			if manager.RobotBasicModulesExpectRunSet.SerialServiceExpectRun && !manager.RobotBasicModulesSet.SerialService.IsAlive() {
 				go manager.RobotBasicModulesSet.SerialService.Start()
 			}
-			if manager.RobotBasicModulesExpectRunSet.LocalCallHttpExpectRun && !manager.RobotBasicModulesSet.LocalCallHttp.IsAlive() {
-				go manager.RobotBasicModulesSet.LocalCallHttp.Start()
-			}
-			if manager.RobotBasicModulesExpectRunSet.HttpAppExpectRun && !manager.RobotBasicModulesSet.HttpApp.IsAlive() {
-				go manager.RobotBasicModulesSet.HttpApp.Start()
-			}
 			if manager.RobotBasicModulesExpectRunSet.WebAppExpectRun && !manager.RobotBasicModulesSet.WebApp.IsAlive() {
 				go manager.RobotBasicModulesSet.WebApp.Start()
 			}
 			if manager.RobotBasicModulesExpectRunSet.TaskTableAppExpectRun && !manager.RobotBasicModulesSet.TaskTableApp.IsAlive() {
 				go manager.RobotBasicModulesSet.TaskTableApp.Start()
 			}
-			if manager.RobotBasicModulesExpectRunSet.VisualAppExpectRun && !manager.RobotBasicModulesSet.VisualApp.IsAlive() {
-				go manager.RobotBasicModulesSet.VisualApp.Start()
-			}
-
+			/*
+				if manager.RobotBasicModulesExpectRunSet.VisualAppExpectRun && !manager.RobotBasicModulesSet.VisualApp.IsAlive() {
+					go manager.RobotBasicModulesSet.VisualApp.Start()
+				}
+			*/
 		}
 	}
 }

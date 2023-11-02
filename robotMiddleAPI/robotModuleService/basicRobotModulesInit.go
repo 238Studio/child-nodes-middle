@@ -40,11 +40,10 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 		LocalDatabaseService:  nil,
 		RemoteDatabaseService: nil,
 		SerialService:         nil,
-		LocalCallHttp:         nil,
 		HttpApp:               nil,
 		WebApp:                nil,
 		TaskTableApp:          nil,
-		VisualApp:             nil,
+		//VisualApp:             nil,
 	}
 	// 调用各个模块的初始化参数载入模块
 
