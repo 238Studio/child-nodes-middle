@@ -1,8 +1,8 @@
 package basicTaskAPI
 
 import (
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/realityObjects/visualObject"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/visualService/visualServiceStructs"
+	"github.com/UniversalRobotDriveTeam/child-nodes-reality-objects/realityObjects/visualObject"
+	"github.com/UniversalRobotDriveTeam/child-nodes-visual-service/visualService/visualServiceStructs"
 )
 
 // GetObjectsPhotosInPhoto 使用指定模型切割画面

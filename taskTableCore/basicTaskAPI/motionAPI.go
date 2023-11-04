@@ -1,8 +1,6 @@
 package basicTaskAPI
 
-import (
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/realityObjects/space"
-)
+import "github.com/UniversalRobotDriveTeam/child-nodes-reality-objects/realityObjects/space"
 
 // SetExpectSpeed 设置机器人目标速度
 // 传入：目标速度

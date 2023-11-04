@@ -3,11 +3,12 @@ package robotModuleService
 import (
 	"encoding/json"
 	_const "github.com/UniversalRobotDriveTeam/child-nodes-assist/const"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/configService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/databaseService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/deviceService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/httpNetService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/websocketService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-config-service/configService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-database-service/databaseService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-device-service/deviceService"
+
 	"strconv"
 	"time"
 )

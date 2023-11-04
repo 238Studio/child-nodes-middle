@@ -1,12 +1,11 @@
 package robotModuleService
 
 import (
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/configService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/databaseService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/deviceService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/httpNetService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/websocketService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-middle/robotMiddleAPI/taskTableCore"
+	"github.com/UniversalRobotDriveTeam/child-nodes-config-service/configService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-database-service/databaseService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-device-service/deviceService"
 )
 
 // RobotBasicModules 构成子节点最基本的几个模块
@@ -23,8 +22,6 @@ type RobotBasicModules struct {
 	HttpApp *httpNetService.HttpAPP
 	// webSocket传递服务
 	WebApp *websocketService.WebApp
-	// 任务表服务
-	TaskTableApp *taskTableCore.TaskTableApp
 	// 视觉服务 todo
 	//VisualApp *visualService
 }
@@ -49,8 +46,6 @@ type RobotBasicModulesExpectRun struct {
 	HttpAppExpectRun bool
 	// webSocket传递服务是否运行
 	WebAppExpectRun bool
-	// 任务表服务是否运行
-	TaskTableAppExpectRun bool
 	// 视觉服务是否运行
 	VisualAppExpectRun bool
 }
@@ -76,8 +71,6 @@ type BasicRobotModulesInitArgs struct {
 	HttpAppInit interface{}
 	// webSocket传递服务初始化参数
 	WebAppInit interface{}
-	// 任务表服务初始化参数
-	TaskTableAppInit interface{}
 	// 视觉服务初始化参数
 	VisualAppInit interface{}
 }

@@ -17,7 +17,6 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 	app.RobotBasicModulesExpectRunSet.LocalCallUnixSocketExpectRun = true
 	app.RobotBasicModulesExpectRunSet.HttpAppExpectRun = true
 	app.RobotBasicModulesExpectRunSet.WebAppExpectRun = true
-	app.RobotBasicModulesExpectRunSet.TaskTableAppExpectRun = true
 	app.RobotBasicModulesExpectRunSet.VisualAppExpectRun = true
 	// 获取一个终止模块监控管道
 	channel := make(chan int, 1)
@@ -32,7 +31,6 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 		LocalCallUnixSocketInit:   nil,
 		HttpAppInit:               nil,
 		WebAppInit:                nil,
-		TaskTableAppInit:          nil,
 		VisualAppInit:             nil,
 	}
 	app.RobotBasicModulesSet = &RobotBasicModules{
@@ -42,18 +40,9 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 		SerialService:         nil,
 		HttpApp:               nil,
 		WebApp:                nil,
-		TaskTableApp:          nil,
 		//VisualApp:             nil,
 	}
 	// 调用各个模块的初始化参数载入模块
-
-	// 初始化配置模块
-
-	// 初始化本地数据库服务
-
-	// 初始化远程数据库模块
-
-	// 初始化串口服务
 
 	return &app
 }
