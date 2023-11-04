@@ -41,8 +41,17 @@ github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym
 github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.2 h1:xwGGhrJgRFEQVxWDLZfG9vCjlj3JfRuHpp6WPBiEdOI=
 github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.2/go.mod h1:Bt1nL4+xQ5ns+fatFxE0xoiuiE5NeoAMPcraY6TxilY=
 github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.3-0.20231102142647-73a75b689c55/go.mod h1:Bt1nL4+xQ5ns+fatFxE0xoiuiE5NeoAMPcraY6TxilY=
+github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.3 h1:Vm0X+xQN+WmAog/L+yzT6FDN4G2jS458h0m073a5J6o=
+github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.3/go.mod h1:Bt1nL4+xQ5ns+fatFxE0xoiuiE5NeoAMPcraY6TxilY=
 github.com/UniversalRobotDriveTeam/child-nodes-basic v1.0.0 h1:Nu3VaYAi5vQY5fvw+9vJajPT1z87vxfCg+I3K0F90rs=
 github.com/UniversalRobotDriveTeam/child-nodes-basic v1.0.0/go.mod h1:hYI8mewgFSaJex7g6mERhbBwC2HgvlvuR/36rE7P7zg=
+github.com/UniversalRobotDriveTeam/child-nodes-basic v1.1.0/go.mod h1:hYI8mewgFSaJex7g6mERhbBwC2HgvlvuR/36rE7P7zg=
+github.com/UniversalRobotDriveTeam/child-nodes-config-service v1.0.0/go.mod h1:SOCvWPsWuxHxIw/tSICyRz5Sg94cgeiNiYayGOYStX8=
+github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.0/go.mod h1:5VSF96I2UWW9NlzK8VgHlyk0WlGOVzEIYq1W21o1PKM=
+github.com/UniversalRobotDriveTeam/child-nodes-device-service v1.0.0/go.mod h1:VwUfwxn7xNKk2zfIlB3uOKAhlOBPgfzpx37cUpP2g6A=
+github.com/UniversalRobotDriveTeam/child-nodes-modle-task v1.0.0/go.mod h1:/1lTykA6tJ2djdsbOYGi6hB1nvXKqDgzCa4FhjXjn80=
+github.com/UniversalRobotDriveTeam/child-nodes-reality-objects v1.0.0/go.mod h1:V73n/623TyN0J9qsMWmnUD6dfrYHeJhh/wqBJ9HmTco=
+github.com/UniversalRobotDriveTeam/child-nodes-visual-service v1.0.0/go.mod h1:ZgHNZoYPrhDJFk1WCVgqixnSc2TKWPgiE2vewq+MKSc=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWRnGsAI=
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
