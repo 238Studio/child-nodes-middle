@@ -3,13 +3,14 @@ module github.com/UniversalRobotDriveTeam/child-nodes-middle
 go 1.21.1
 
 require (
-	github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.4
-	github.com/UniversalRobotDriveTeam/child-nodes-basic v1.0.0
+	github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.6-0.20231105034323-ccafcf6b0b63
 	github.com/UniversalRobotDriveTeam/child-nodes-config-service v1.0.0
 	github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.0
-	github.com/UniversalRobotDriveTeam/child-nodes-device-service v1.0.0
+	github.com/UniversalRobotDriveTeam/child-nodes-device-service v1.0.2-0.20231105033147-9b06a6088d80
+	github.com/UniversalRobotDriveTeam/child-nodes-net-service v1.0.1-0.20231104100331-eac31178947b
 	github.com/UniversalRobotDriveTeam/child-nodes-reality-objects v1.0.2
 	github.com/UniversalRobotDriveTeam/child-nodes-visual-service v1.0.0
+	github.com/UniversalRobotDriveTeam/child-nodes-websocket-service v1.0.1-0.20231105034625-bc38be5e50d0
 )
 
 require (

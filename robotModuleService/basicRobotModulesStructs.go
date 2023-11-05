@@ -1,11 +1,10 @@
 package robotModuleService
 
 import (
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/httpNetService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/websocketService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-config-service/configService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-database-service/databaseService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-device-service/deviceService"
+	"github.com/UniversalRobotDriveTeam/child-nodes-websocket-service/websocketService"
 )
 
 // RobotBasicModules 构成子节点最基本的几个模块
@@ -18,8 +17,6 @@ type RobotBasicModules struct {
 	RemoteDatabaseService *databaseService.DatabaseAPP
 	// 串口服务
 	SerialService *deviceService.SerialApp
-	// Http传递服务
-	HttpApp *httpNetService.HttpAPP
 	// webSocket传递服务
 	WebApp *websocketService.WebApp
 	// 视觉服务 todo

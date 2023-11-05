@@ -43,6 +43,8 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 		//VisualApp:             nil,
 	}
 	// 调用各个模块的初始化参数载入模块
-
+	app.InitAllBasicModels()
+	// 启动基础模块监视器
+	app.StartRobotModulesMonitor()
 	return &app
 }

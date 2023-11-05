@@ -3,12 +3,10 @@ package robotModuleService
 import (
 	"encoding/json"
 	_const "github.com/UniversalRobotDriveTeam/child-nodes-assist/const"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/httpNetService"
-	"github.com/UniversalRobotDriveTeam/child-nodes-basic/robotBasicAPI/websocketService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-config-service/configService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-database-service/databaseService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-device-service/deviceService"
-
+	"github.com/UniversalRobotDriveTeam/child-nodes-websocket-service/websocketService"
 	"strconv"
 	"time"
 )
@@ -160,18 +158,6 @@ func (manager *BasicRobotModuleManager) cHttpApp() {
 	value[0] = url
 	value[1] = params
 	manager.BasicRobotModulesInitArgsSet.HttpAppInit = &value
-}
-
-// 初始化Http网络服务
-// 传入：无
-// 传出：无
-func (manager *BasicRobotModuleManager) iHttpApp() {
-	var url string
-	var params map[string]string
-	args := *manager.BasicRobotModulesInitArgsSet.HttpAppInit.(*[]interface{})
-	url = args[0].(string)
-	params = args[1].(map[string]string)
-	manager.RobotBasicModulesSet.HttpApp = httpNetService.InitHttpAPP(url, params)
 }
 
 // 初始化websocket网络服务配置

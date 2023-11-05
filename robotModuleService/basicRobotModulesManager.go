@@ -63,9 +63,6 @@ func (manager *BasicRobotModuleManager) InitBasicModule(moduleName string) {
 	case _const12.ConfigService:
 		manager.cConfig()
 		manager.iConfig()
-	case _const12.HttpApp:
-		manager.iHttpApp()
-		manager.cHttpApp()
 	case _const12.LocalDatabaseService:
 		manager.cLocalDatabase()
 		manager.iLocalDatabase()
@@ -89,6 +86,5 @@ func (manager *BasicRobotModuleManager) InitAllBasicModels() {
 	manager.InitBasicModule(_const12.LocalDatabaseService)
 	manager.InitBasicModule(_const12.RemoteDatabaseService)
 	manager.InitBasicModule(_const12.SerialService)
-	manager.InitBasicModule(_const12.HttpApp)
 	manager.InitBasicModule(_const12.WebApp)
 }
