@@ -38,7 +38,6 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 		LocalDatabaseService:  nil,
 		RemoteDatabaseService: nil,
 		SerialService:         nil,
-		HttpApp:               nil,
 		WebApp:                nil,
 		//VisualApp:             nil,
 	}
