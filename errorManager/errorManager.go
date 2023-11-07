@@ -13,17 +13,21 @@ func (manager *ErrorManager) RecordError(customError *util.CustomError) {
 }
 
 // QueryErrorsByClass 根据错误等级查询所有时段内存在的错误
-// 输入：错误等级
+// 输入：错误等级，模块
 // 输出：符合条件的错误集合
 func (manager *ErrorManager) QueryErrorsByClass(errorClass int) *[]util.CustomError {
-
+	r := make([]util.CustomError, 0)
+	manager.database.GetDatabase().Table(manager.errorDatabaseTable).Where("errorclass = ?", errorClass).Find(&r)
+	return &r
 }
 
 // QueryErrorsByClassAndTime 根据错误等级查询一定时间内存在的错误
-// 输入：错误等级，开始时间，结束时间(时间戳)
+// 输入：错误等级，开始时间，结束时间(时间戳)，模块
 // 输出：符合条件的错误集合
 func (manager *ErrorManager) QueryErrorsByClassAndTime(errorClass int, beginTime string, endTime string) *[]util.CustomError {
-	//todo
+	r := make([]util.CustomError, 0)
+	manager.database.GetDatabase().Table(manager.errorDatabaseTable).Where("errorclass = ? AND date > beginTime AND date < endTime", errorClass, beginTime, endTime).Find(&r)
+	return &r
 }
 
 // GetErrorChannel 获取向错误管理器传递错误的管道

@@ -46,6 +46,7 @@ github.com/UniversalRobotDriveTeam/child-nodes-config-service v1.0.1-0.202311060
 github.com/UniversalRobotDriveTeam/child-nodes-config-service v1.0.1-0.20231106065959-a056003de605/go.mod h1:Jwo6R599yYIZ2sV+DnWjaCk1LPM3Fn2bbhh/KMvVZ1E=
 github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.1-0.20231107010146-897f156aa561 h1:Ia5MM/Z9oi7Pz+dOYh/TZVPZ8lVjGXefHWGpRBjp3M4=
 github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.1-0.20231107010146-897f156aa561/go.mod h1:5VSF96I2UWW9NlzK8VgHlyk0WlGOVzEIYq1W21o1PKM=
+github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.1-0.20231107035007-a4bdec893356/go.mod h1:5VSF96I2UWW9NlzK8VgHlyk0WlGOVzEIYq1W21o1PKM=
 github.com/UniversalRobotDriveTeam/child-nodes-device-service v1.0.2-0.20231105033147-9b06a6088d80 h1:N7Mz1ASIiDUjBVviNZCYhrliWDJiDwqspIpTSwyEYWw=
 github.com/UniversalRobotDriveTeam/child-nodes-device-service v1.0.2-0.20231105033147-9b06a6088d80/go.mod h1:dm3oQqM6n9iGHG8Zg5l4e1bkIhUhWAbEc8YkE/444vM=
 github.com/UniversalRobotDriveTeam/child-nodes-reality-objects v1.0.2 h1:gjDYpnOdS7opw021Mtna6XJLiIY5UD57u4n+Xb9mJF4=

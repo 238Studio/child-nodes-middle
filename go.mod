@@ -5,7 +5,7 @@ go 1.21.1
 require (
 	github.com/UniversalRobotDriveTeam/child-nodes-assist v1.0.6-0.20231106065558-10e73cb5e208
 	github.com/UniversalRobotDriveTeam/child-nodes-config-service v1.0.1-0.20231106065959-a056003de605
-	github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.1-0.20231107010146-897f156aa561
+	github.com/UniversalRobotDriveTeam/child-nodes-database-service v1.0.1-0.20231107035007-a4bdec893356
 	github.com/UniversalRobotDriveTeam/child-nodes-device-service v1.0.2-0.20231105033147-9b06a6088d80
 	github.com/UniversalRobotDriveTeam/child-nodes-reality-objects v1.0.2
 	github.com/UniversalRobotDriveTeam/child-nodes-visual-service v1.0.0
