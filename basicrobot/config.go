@@ -1,14 +1,15 @@
-package robotModuleService
+package basicrobot
 
 import (
 	"encoding/json"
+	"strconv"
+	"time"
+
 	_const "github.com/UniversalRobotDriveTeam/child-nodes-assist/const"
 	"github.com/UniversalRobotDriveTeam/child-nodes-config-service/configService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-database-service/databaseService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-device-service/deviceService"
 	"github.com/UniversalRobotDriveTeam/child-nodes-websocket-service/websocketService"
-	"strconv"
-	"time"
 )
 
 // Config本身没有配置

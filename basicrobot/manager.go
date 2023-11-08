@@ -1,8 +1,9 @@
-package robotModuleService
+package basicrobot
 
 import (
-	_const12 "github.com/UniversalRobotDriveTeam/child-nodes-middle/const"
 	"time"
+
+	_const "github.com/UniversalRobotDriveTeam/child-nodes-middle/const"
 )
 
 // StartRobotModulesMonitor 开始子节点模块监控器
@@ -46,11 +47,9 @@ func (manager *BasicRobotModuleManager) robotModulesMonitor() {
 			if manager.RobotBasicModulesExpectRunSet.WebAppExpectRun && !manager.RobotBasicModulesSet.WebApp.IsAlive() {
 				go manager.RobotBasicModulesSet.WebApp.Start()
 			}
-			/*
-				if manager.RobotBasicModulesExpectRunSet.VisualAppExpectRun && !manager.RobotBasicModulesSet.VisualApp.IsAlive() {
-					go manager.RobotBasicModulesSet.VisualApp.Start()
-				}
-			*/
+			//if manager.RobotBasicModulesExpectRunSet.VisualAppExpectRun && !manager.RobotBasicModulesSet.VisualApp.IsAlive() {
+			//	go manager.RobotBasicModulesSet.VisualApp.Start()
+			//}
 		}
 	}
 }
@@ -60,19 +59,19 @@ func (manager *BasicRobotModuleManager) robotModulesMonitor() {
 // 传出：无
 func (manager *BasicRobotModuleManager) InitBasicModule(moduleName string) {
 	switch moduleName {
-	case _const12.ConfigService:
+	case _const.ConfigService:
 		manager.cConfig()
 		manager.iConfig()
-	case _const12.LocalDatabaseService:
+	case _const.LocalDatabaseService:
 		manager.cLocalDatabase()
 		manager.iLocalDatabase()
-	case _const12.SerialService:
+	case _const.SerialService:
 		manager.cSerial()
 		manager.iConfig()
-	case _const12.RemoteDatabaseService:
+	case _const.RemoteDatabaseService:
 		manager.cRemoteDatabase()
 		manager.iRemoteDatabase()
-	case _const12.WebApp:
+	case _const.WebApp:
 		manager.cWebApp()
 		manager.iWebApp()
 	}
@@ -82,9 +81,9 @@ func (manager *BasicRobotModuleManager) InitBasicModule(moduleName string) {
 // 传入：无
 // 传出：无
 func (manager *BasicRobotModuleManager) InitAllBasicModels() {
-	manager.InitBasicModule(_const12.ConfigService)
-	manager.InitBasicModule(_const12.LocalDatabaseService)
-	manager.InitBasicModule(_const12.RemoteDatabaseService)
-	manager.InitBasicModule(_const12.SerialService)
-	manager.InitBasicModule(_const12.WebApp)
+	manager.InitBasicModule(_const.ConfigService)
+	manager.InitBasicModule(_const.LocalDatabaseService)
+	manager.InitBasicModule(_const.RemoteDatabaseService)
+	manager.InitBasicModule(_const.SerialService)
+	manager.InitBasicModule(_const.WebApp)
 }

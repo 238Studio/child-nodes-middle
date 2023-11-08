@@ -1,4 +1,4 @@
-package basicTaskAPI
+package api
 
 type BasicTaskApp struct {
 }

@@ -9,7 +9,7 @@ import (
 type ErrorManager struct {
 	// 数据库应用
 	database databaseService.DatabaseAPP
-	// 错误数据库数据表
+	// 错误数据库数据表表名
 	errorDatabaseTable string
 	// 错误管道集合 moduleID->channelID->*channel
 	errorChannels map[string]map[int]*ErrorMessageChannel

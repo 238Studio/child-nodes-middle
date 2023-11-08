@@ -1,4 +1,4 @@
-package robotModuleService
+package basicrobot
 
 import (
 	"github.com/UniversalRobotDriveTeam/child-nodes-config-service/configService"

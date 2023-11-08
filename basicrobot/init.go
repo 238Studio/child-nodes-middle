@@ -1,12 +1,13 @@
-package robotModuleService
+package basicrobot
 
 // InitRobotModuleManagerApp 初始化子节点模块管理器
 // 传入：初始化参数
 // 传出：子节点模块管理器
 func InitRobotModuleManagerApp() *BasicRobotModuleManager {
-	// 分配一块基本模块管理器对象
+	// 分配基本模块管理器对象
 	app := *new(BasicRobotModuleManager)
-	// 分配一块基本模块是否预备运行表
+
+	// 初始化模块运行状态表
 	app.RobotBasicModulesExpectRunSet = new(RobotBasicModulesExpectRun)
 	app.RobotBasicModulesExpectRunSet.ConfigServiceExpectRun = true
 	app.RobotBasicModulesExpectRunSet.LocalDatabaseServiceExpectRun = true
@@ -18,9 +19,12 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 	app.RobotBasicModulesExpectRunSet.HttpAppExpectRun = true
 	app.RobotBasicModulesExpectRunSet.WebAppExpectRun = true
 	app.RobotBasicModulesExpectRunSet.VisualAppExpectRun = true
-	// 获取一个终止模块监控管道
+
+	// 获取终止模块监控管道
 	channel := make(chan int, 1)
 	app.stopRobotMonitorChannel = &channel
+
+	//TODO：注释
 	app.BasicRobotModulesInitArgsSet = &BasicRobotModulesInitArgs{
 		ConfigServiceInit:         nil,
 		LocalDatabaseServiceInit:  nil,
@@ -41,6 +45,7 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 		WebApp:                nil,
 		//VisualApp:             nil,
 	}
+
 	// 调用各个模块的初始化参数载入模块
 	app.InitAllBasicModels()
 	// 启动基础模块监视器

@@ -1,4 +1,4 @@
-package robotModuleService
+package basicrobot
 
 import "testing"
 

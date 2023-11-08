@@ -1,4 +1,4 @@
-package basicTaskAPI
+package api
 
 import (
 	"github.com/UniversalRobotDriveTeam/child-nodes-reality-objects/realityObjects/visualObject"
