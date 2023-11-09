@@ -21,18 +21,6 @@ func InitRobotModuleManagerApp() *BasicRobotModuleManager {
 	// 获取一个终止模块监控管道
 	channel := make(chan int, 1)
 	app.stopRobotMonitorChannel = &channel
-	app.BasicRobotModulesInitArgsSet = &BasicRobotModulesInitArgs{
-		ConfigServiceInit:         nil,
-		LocalDatabaseServiceInit:  nil,
-		RemoteDatabaseServiceInit: nil,
-		SerialServiceInit:         nil,
-		ErrorManagerInit:          nil,
-		LocalCallHttpInit:         nil,
-		LocalCallUnixSocketInit:   nil,
-		HttpAppInit:               nil,
-		WebAppInit:                nil,
-		VisualAppInit:             nil,
-	}
 	app.RobotBasicModulesSet = &RobotBasicModules{
 		ConfigService:         nil,
 		LocalDatabaseService:  nil,
