@@ -3,7 +3,7 @@ package call
 // Call 发起调用
 // 传入:包名、函数名、参数
 // 传出:返回值
-func Call(packageName string, methodName string, args uintptr) uintptr {
+func Call(packageName string, methodName string, args []uintptr) uintptr {
 	// 获得调用者
 	caller := manager.store[packageName]
 
@@ -29,7 +29,7 @@ func (callForm *CallForm) GetMethodName() string {
 // GetArgs 获取参数
 // 传入:无
 // 传出:参数
-func (callForm *CallForm) GetArgs() uintptr {
+func (callForm *CallForm) GetArgs() []uintptr {
 	return callForm.args
 }
 

@@ -15,6 +15,6 @@ type Receiver struct {
 type CallForm struct {
 	packageName string       // 包名
 	methodName  string       // 函数名
-	args        uintptr      // 参数
+	args        []uintptr    // 参数
 	re          chan uintptr // 返回值，通过通道传递
 }
